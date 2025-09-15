@@ -1,6 +1,5 @@
 # [Created by task 3.4.1 8/19/2025 11:39:34]
 data.location=$HOME/.task
-#data.location=/Users/jeremy.luscombe/.task
 news.version=3.4.1
 
 # To use the default location of the XDG directories,
@@ -30,4 +29,7 @@ context.work.read=project:work
 context.work.write=project:work
 context.personal.read=project:personal
 context.personal.write=project:personal
+report.ls.columns=id,project,description,priority
+report.ls.labels=id,project,description,priority
+report.ls.sort=priority-
 context=work
