@@ -11,11 +11,11 @@ news.version=3.4.1
 # Color theme (uncomment one to use)
 #include light-16.theme
 #include light-256.theme
-#include bubblegum-256.theme
+include bubblegum-256.theme
 #include dark-16.theme
 #include dark-256.theme
 #include dark-red-256.theme
-include dark-green-256.theme
+#include dark-green-256.theme
 #include dark-blue-256.theme
 #include dark-violets-256.theme
 #include dark-yellow-green.theme
@@ -29,7 +29,9 @@ context.work.read=project:work
 context.work.write=project:work
 context.personal.read=project:personal
 context.personal.write=project:personal
-report.ls.columns=id,project,description,priority
-report.ls.labels=id,project,description,priority
+report.ls.columns=id,project,description,priority,status,start
+report.ls.labels=id,project,description,priority,status,started
 report.ls.sort=priority-
 context=work
+context.projects.read=+projects
+context.projects.write=+projects
