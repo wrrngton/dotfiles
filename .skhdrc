@@ -1,0 +1,15 @@
+# Open iterm
+# cmd + shift + enter : open -a iTerm
+alt + shift - 1 : open -a "iTerm"
+
+# Open Chrome
+alt + shift - 2 : open -a "Google chrome"
+
+# Open Slack
+alt + shift - 3 : open -a Slack
+
+# Open Spotify
+alt + shift - 4 : open -a Spotify
+
+# Open finder 
+alt + shift - 5 : open -a Finder
