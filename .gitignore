@@ -4,3 +4,4 @@
 !.gitignore
 !.taskrc
 !.skhdrc
+!nvim/
