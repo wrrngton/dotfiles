@@ -4,7 +4,6 @@ return {
   config = function()
     vim.filetype.add({
       extension = {
-        html = 'htmldjango',
         jinja = 'htmldjango',
         jinja2 = 'htmldjango',
         j2 = 'htmldjango',

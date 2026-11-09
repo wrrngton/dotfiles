@@ -18,6 +18,9 @@ vim.opt.rtp:prepend(lazypath)
 require("vim-options")
 require("lazy").setup("plugins")
 
+-- Keep formatting available even if the none-ls plugin config is delayed or fails.
+vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, { desc = "Format buffer" })
+
 vim.filetype.add({
   extension = {
     j2 = 'jinja',

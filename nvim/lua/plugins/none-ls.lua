@@ -8,6 +8,7 @@ return {
         null_ls.builtins.formatting.black,
         null_ls.builtins.formatting.isort,
         null_ls.builtins.formatting.prettier,
+        null_ls.builtins.formatting.google_java_format,
         null_ls.builtins.formatting.djlint.with({
           filetypes = { "htmldjango", "jinja" },
         }),
@@ -20,10 +21,17 @@ return {
           end,
         }),
         null_ls.builtins.diagnostics.stylelint,
-        null_ls.builtins.diagnostics.staticcheck
+        -- Staticcheck disabled: installed none-ls adapter emits invalid diagnostic ranges
       },
     })
-    vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+
+    local format_group = vim.api.nvim_create_augroup("format_on_save", { clear = true })
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      group = format_group,
+      callback = function(event)
+        vim.lsp.buf.format({ bufnr = event.buf, async = false, timeout_ms = 3000 })
+      end,
+    })
   end,
 }
 

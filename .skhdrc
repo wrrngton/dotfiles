@@ -3,7 +3,7 @@
 alt + shift - 1 : open -a "iTerm"
 
 # Open Chrome
-alt + shift - 2 : open -a "Google chrome"
+alt + shift - 2 : open -a "Brave"
 
 # Open Slack
 alt + shift - 3 : open -a Slack
